@@ -1,0 +1,193 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #000000;
+    --header-bg: #557cb6;
+    --card-bg: #80a6df;
+    --accent-color: #3336f0;
+    --font-main: 'Poppins', sans-serif;
+    
+}
+
+body.dark-mode {
+    --bg-color: #000000;
+    --text-color: #dfe6e9;
+    --header-bg: #020492;
+    --card-bg: #201b66;
+    --accent-color: #0d0761;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    z-index: 100;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--header-bg);
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.character-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.character-card a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.character-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.character-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.character-card p {
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.plot p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.trivia ul {
+    list-style-position: inside;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.trivia li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--header-bg);
+    color: white;
+    margin-top: 50px;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--header-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.character-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.character-detail img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.character-detail h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--header-bg);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .character-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .character-card {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
