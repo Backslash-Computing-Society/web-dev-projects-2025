@@ -1,0 +1,189 @@
+:root{
+    --bg: white;
+    --text: black;
+    --card-bg: rgba(255,255,255,0.7);
+}
+body{
+    background: var(--bg);
+    color: var(--text);
+}
+.theme-box{
+    position: fixed;
+    top: 12px;
+    right: 18px;
+    font-family: sans-serif;
+    font-weight: 600;
+    background: rgba(255,255,255,0.6);
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 999;
+}
+.intro{
+    color: rgb(69, 69, 69);
+    padding: 25px;
+}
+.intro_paragraph {
+    color: rgb(50, 50, 50);
+    background: var(--card-bg);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 12px;
+    line-height: 1.6;    
+    font-size: 1.2rem;    
+    font-weight: 600;   
+}
+.intro_overall {
+    background-image: url("strawhats.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    padding-bottom: 40px;
+}
+.logo{
+    margin-top: 50px;
+    width: 250px;
+    height: 100px;
+}
+.strawhats{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+.Member{
+    border: 3px solid rgb(0, 0, 0);
+    margin-left: 10px;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 15px;
+    height:300px;
+    width:200px;
+}
+.crew{
+    position: relative;
+    width:200px;
+    height:300px;
+    margin:30px;
+}
+.crew::after{
+    content:"";
+    position: absolute;
+    top:10px;
+    box-shadow: 10px 10px 5px grey;
+    border: 3px solid rgb(0, 0, 0);
+    left: 170%;
+    border-radius: 15px;
+    opacity:0;
+    transition: opacity 0.3s ease-in;
+    width: calc( 100vw - 500px);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    pointer-events: none;
+}
+.crew:hover::after{
+    opacity: 1;
+}
+.crew.luffy::after   { background-image: url("luffyhover.jpg"); }
+.crew.zoro::after    { background-image: url("zorohover.jpg"); }
+.crew.nami::after    { background-image: url("namihover.jpg"); }
+.crew.usopp::after   { background-image: url("usopphover.jpg"); }
+.crew.sanji::after   { background-image: url("sanjihover.jpg"); }
+.crew.chopper::after { background-image: url("chopperhover.jpg"); }
+.crew.robin::after   { background-image: url("robinhover.jpg"); }
+.crew.jinbe::after   { background-image: url("jinbehover.jpg"); }
+.crew.brook::after   { background-image: url("brookhover.jpg"); }
+.crew.franky::after  { background-image: url("frankyhover.jpg"); }
+.strawhats h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;  
+    text-transform: uppercase;
+    color: #222;
+}
+.bio {
+    width: 200px;
+    margin-left: 45px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(60, 60, 60);
+    font-family: sans-serif;
+}
+.timepoint{
+    border: 3px;
+    border-style: solid;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 15px;
+    height:300px;
+    width: 200px;
+    margin: 20px;
+}
+.timeline {
+    display: grid;
+    grid-template-columns: 200px 200px 1fr;
+    align-items: center;
+    margin-left: 25px;
+}
+.arc{
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(60, 60, 60);
+    margin: 0;
+}
+.line{
+    width:3px;
+    height:100%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 25px;
+}
+.dot{
+    width:10px;
+    height:10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+.line {
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    margin: 0 auto;
+}
+.info{
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    gap:15px;
+}
+body.dark{
+    --bg: rgb(20,20,20);
+    --text: rgb(230,230,230);
+    --card-bg: rgba(40,40,40,0.7);
+}
+body.dark .intro_paragraph{
+    color: var(--text);
+    background: var(--card-bg);
+}
+body.dark .strawhats h3,
+body.dark .bio,
+body.dark .arc,
+body.dark .intro{
+    color: var(--text);
+}
+body.dark .theme-box{
+    background: rgba(40,40,40,0.6);
+}
+
+body.dark .line,
+body.dark .dot{
+    background-color: rgb(230,230,230);
+}
